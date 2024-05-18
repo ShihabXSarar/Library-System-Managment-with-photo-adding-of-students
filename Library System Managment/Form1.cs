@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Library_System_Managment
 {
-    public partial class Form1 : Form
+    public partial class loginpage : Form
     {
-        public Form1()
+        public loginpage()
         {
             InitializeComponent();
         }

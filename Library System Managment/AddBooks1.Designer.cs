@@ -62,7 +62,7 @@ namespace Library_System_Managment
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(1, 77);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(296, 352);
+            this.pictureBox1.Size = new System.Drawing.Size(296, 439);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -76,7 +76,7 @@ namespace Library_System_Managment
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Location = new System.Drawing.Point(1, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(675, 77);
+            this.panel1.Size = new System.Drawing.Size(1211, 77);
             this.panel1.TabIndex = 1;
             // 
             // label1
@@ -84,7 +84,7 @@ namespace Library_System_Managment
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("MV Boli", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(356, 20);
+            this.label1.Location = new System.Drawing.Point(624, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(154, 34);
             this.label1.TabIndex = 1;
@@ -94,7 +94,7 @@ namespace Library_System_Managment
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(250, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(518, 0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(100, 77);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -123,7 +123,7 @@ namespace Library_System_Managment
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(297, 77);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(379, 352);
+            this.panel2.Size = new System.Drawing.Size(915, 439);
             this.panel2.TabIndex = 2;
             // 
             // cancelbtn
@@ -131,7 +131,7 @@ namespace Library_System_Managment
             this.cancelbtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.cancelbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cancelbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelbtn.Location = new System.Drawing.Point(276, 303);
+            this.cancelbtn.Location = new System.Drawing.Point(812, 390);
             this.cancelbtn.Name = "cancelbtn";
             this.cancelbtn.Size = new System.Drawing.Size(75, 23);
             this.cancelbtn.TabIndex = 3;
@@ -144,7 +144,7 @@ namespace Library_System_Managment
             this.addbtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.addbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addbtn.Location = new System.Drawing.Point(171, 303);
+            this.addbtn.Location = new System.Drawing.Point(707, 390);
             this.addbtn.Name = "addbtn";
             this.addbtn.Size = new System.Drawing.Size(75, 23);
             this.addbtn.TabIndex = 3;
@@ -158,7 +158,7 @@ namespace Library_System_Managment
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePicker1.Location = new System.Drawing.Point(161, 169);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(736, 20);
             this.dateTimePicker1.TabIndex = 2;
             // 
             // textbquantity
@@ -167,7 +167,7 @@ namespace Library_System_Managment
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textbquantity.Location = new System.Drawing.Point(161, 247);
             this.textbquantity.Name = "textbquantity";
-            this.textbquantity.Size = new System.Drawing.Size(200, 20);
+            this.textbquantity.Size = new System.Drawing.Size(736, 20);
             this.textbquantity.TabIndex = 1;
             // 
             // textbprice
@@ -176,7 +176,7 @@ namespace Library_System_Managment
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textbprice.Location = new System.Drawing.Point(161, 207);
             this.textbprice.Name = "textbprice";
-            this.textbprice.Size = new System.Drawing.Size(200, 20);
+            this.textbprice.Size = new System.Drawing.Size(736, 20);
             this.textbprice.TabIndex = 1;
             // 
             // textbpub
@@ -185,7 +185,7 @@ namespace Library_System_Managment
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textbpub.Location = new System.Drawing.Point(161, 127);
             this.textbpub.Name = "textbpub";
-            this.textbpub.Size = new System.Drawing.Size(200, 20);
+            this.textbpub.Size = new System.Drawing.Size(736, 20);
             this.textbpub.TabIndex = 1;
             // 
             // textauthor
@@ -194,7 +194,7 @@ namespace Library_System_Managment
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textauthor.Location = new System.Drawing.Point(161, 82);
             this.textauthor.Name = "textauthor";
-            this.textauthor.Size = new System.Drawing.Size(200, 20);
+            this.textauthor.Size = new System.Drawing.Size(736, 20);
             this.textauthor.TabIndex = 1;
             // 
             // textbookname
@@ -204,7 +204,7 @@ namespace Library_System_Managment
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textbookname.Location = new System.Drawing.Point(161, 46);
             this.textbookname.Name = "textbookname";
-            this.textbookname.Size = new System.Drawing.Size(200, 20);
+            this.textbookname.Size = new System.Drawing.Size(736, 20);
             this.textbookname.TabIndex = 1;
             // 
             // label7
@@ -284,7 +284,7 @@ namespace Library_System_Managment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 428);
+            this.ClientSize = new System.Drawing.Size(1220, 515);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
