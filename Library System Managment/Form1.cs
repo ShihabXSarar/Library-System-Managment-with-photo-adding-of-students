@@ -47,12 +47,12 @@ namespace Library_System_Managment
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (textUsername.Text == "Username")
+            if (textUsername.Text == "")
             {
                 CreateAccuntForm fm = new CreateAccuntForm();
                 fm.Show();
             }
-           else  if (textUsername.Text == "Username")
+           else  if (textUsername.Text != "")
             {
                 CreateAccuntForm fm = new CreateAccuntForm();
                 fm.Show();

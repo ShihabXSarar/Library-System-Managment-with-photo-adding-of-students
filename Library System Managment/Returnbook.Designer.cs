@@ -66,7 +66,7 @@ namespace Library_System_Managment
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(263, 1679);
+            this.panel1.Size = new System.Drawing.Size(263, 1850);
             this.panel1.TabIndex = 0;
             // 
             // exitbtn
@@ -137,7 +137,7 @@ namespace Library_System_Managment
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(269, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(548, 311);
+            this.dataGridView1.Size = new System.Drawing.Size(531, 311);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -157,7 +157,7 @@ namespace Library_System_Managment
             this.panel2.Controls.Add(this.RETURNbtn);
             this.panel2.Location = new System.Drawing.Point(269, 317);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(548, 166);
+            this.panel2.Size = new System.Drawing.Size(531, 166);
             this.panel2.TabIndex = 2;
             // 
             // dateTimePicker1
@@ -166,7 +166,7 @@ namespace Library_System_Managment
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePicker1.Location = new System.Drawing.Point(256, 95);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(120, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(103, 20);
             this.dateTimePicker1.TabIndex = 5;
             // 
             // textISSUEDATE
@@ -175,7 +175,7 @@ namespace Library_System_Managment
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textISSUEDATE.Location = new System.Drawing.Point(256, 63);
             this.textISSUEDATE.Name = "textISSUEDATE";
-            this.textISSUEDATE.Size = new System.Drawing.Size(120, 20);
+            this.textISSUEDATE.Size = new System.Drawing.Size(103, 20);
             this.textISSUEDATE.TabIndex = 4;
             // 
             // textBOOKNAME
@@ -184,7 +184,7 @@ namespace Library_System_Managment
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBOOKNAME.Location = new System.Drawing.Point(256, 33);
             this.textBOOKNAME.Name = "textBOOKNAME";
-            this.textBOOKNAME.Size = new System.Drawing.Size(120, 20);
+            this.textBOOKNAME.Size = new System.Drawing.Size(103, 20);
             this.textBOOKNAME.TabIndex = 3;
             // 
             // label4

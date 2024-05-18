@@ -29,6 +29,7 @@ namespace Library_System_Managment
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,6 +48,10 @@ namespace Library_System_Managment
             this.textCPassword = new System.Windows.Forms.TextBox();
             this.btnCreateAccount = new System.Windows.Forms.Button();
             this.btnGoback = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -154,6 +159,10 @@ namespace Library_System_Managment
             this.cboGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboGender.FormattingEnabled = true;
+            this.cboGender.Items.AddRange(new object[] {
+            "Male",
+            "Female",
+            "Others"});
             this.cboGender.Location = new System.Drawing.Point(196, 123);
             this.cboGender.Name = "cboGender";
             this.cboGender.Size = new System.Drawing.Size(121, 26);
@@ -198,6 +207,8 @@ namespace Library_System_Managment
             this.textPassword.Name = "textPassword";
             this.textPassword.Size = new System.Drawing.Size(249, 24);
             this.textPassword.TabIndex = 6;
+            this.textPassword.UseSystemPasswordChar = true;
+            this.textPassword.Leave += new System.EventHandler(this.textPassword_Leave);
             // 
             // textCPassword
             // 
@@ -208,6 +219,9 @@ namespace Library_System_Managment
             this.textCPassword.Name = "textCPassword";
             this.textCPassword.Size = new System.Drawing.Size(249, 24);
             this.textCPassword.TabIndex = 7;
+            this.textCPassword.UseSystemPasswordChar = true;
+            this.textCPassword.TextChanged += new System.EventHandler(this.textCPassword_TextChanged);
+            this.textCPassword.Leave += new System.EventHandler(this.textCPassword_Leave);
             // 
             // btnCreateAccount
             // 
@@ -218,6 +232,7 @@ namespace Library_System_Managment
             this.btnCreateAccount.TabIndex = 8;
             this.btnCreateAccount.Text = "Create Account";
             this.btnCreateAccount.UseVisualStyleBackColor = true;
+            this.btnCreateAccount.Click += new System.EventHandler(this.btnCreateAccount_Click);
             // 
             // btnGoback
             // 
@@ -228,6 +243,15 @@ namespace Library_System_Managment
             this.btnGoback.TabIndex = 9;
             this.btnGoback.Text = " Go Back";
             this.btnGoback.UseVisualStyleBackColor = true;
+            this.btnGoback.Click += new System.EventHandler(this.btnGoback_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
             // 
             // CreateAccuntForm
             // 
@@ -258,6 +282,8 @@ namespace Library_System_Managment
             this.Name = "CreateAccuntForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create an Accunt";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -283,5 +309,7 @@ namespace Library_System_Managment
         private System.Windows.Forms.TextBox textCPassword;
         private System.Windows.Forms.Button btnCreateAccount;
         private System.Windows.Forms.Button btnGoback;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
     }
 }
