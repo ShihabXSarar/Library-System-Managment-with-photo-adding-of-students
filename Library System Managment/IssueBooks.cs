@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,6 +41,7 @@ namespace Library_Management_System
             con.Close();
         }
         int count;
+        int qunt;
 
         private void Searchbtn_Click(object sender, EventArgs e)
         {
@@ -63,6 +64,16 @@ namespace Library_Management_System
                 DA1.Fill(DS1);
                 count = int.Parse(DS1.Tables[0].Rows[0][0].ToString());
                 //count----------------------------
+
+                //Book quantity------------------------------
+                cmd.CommandText = "select bquan from NewBookP where bquan is not NULL";
+                SqlDataAdapter DA2 = new SqlDataAdapter(cmd);
+                DataSet DS2 = new DataSet();
+                DA2.Fill(DS2);
+                qunt = int.Parse(DS2.Tables[0].Rows[0][0].ToString());
+
+                //Book quantity------------------------------
+
                 if (DS.Tables[0].Rows.Count != 0)
                 {
                     textSTNAME.Text = DS.Tables[0].Rows[0][0].ToString();
@@ -95,25 +106,36 @@ namespace Library_Management_System
             {
                 if(comboBox1.SelectedIndex != -1 && count <= 2)
                 {
-                    int STID = int.Parse(textSearchST.Text);
-                    string name = textSTNAME.Text;
-                    string dept = textSTDEPT.Text;
-                    string sem = textSTSEM.Text;
-                    Int64 contact = Int64.Parse(textSTCONTACT.Text);
-                    string email = textSTEMAIL.Text;
-                    string bookname = comboBox1.Text;
-                    string bookidate = dateTimePicker1.Text;
+                    if (qunt != 0)
+                    {
+                        int STID = int.Parse(textSearchST.Text);
+                        string name = textSTNAME.Text;
+                        string dept = textSTDEPT.Text;
+                        string sem = textSTSEM.Text;
+                        Int64 contact = Int64.Parse(textSTCONTACT.Text);
+                        string email = textSTEMAIL.Text;
+                        string bookname = comboBox1.Text;
+                        string bookidate = dateTimePicker1.Text;
+                        qunt--;
 
 
-                    SqlConnection con = new SqlConnection();
-                    con.ConnectionString = "data source= DESKTOP-5903S8A\\SQLEXPRESS; database= master; integrated security=True";
-                    SqlCommand cmd = new SqlCommand();
-                    cmd.Connection = con;
-                    con.Open();
-                    cmd.CommandText = " insert into IRBook (studentID,st_name,st_dep,st_sem,st_contact,st_email,book_name,book_issue_date) values(" + STID + ",'" + name + "','" + dept + "','" + sem + "'," + contact + ",'" + email + "','"+bookname+"','"+bookidate+"')";
-                    cmd.ExecuteNonQuery();
-                    con.Close();
-                    MessageBox.Show("Book Issued", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        SqlConnection con = new SqlConnection();
+                        con.ConnectionString = "data source= DESKTOP-5903S8A\\SQLEXPRESS; database= master; integrated security=True";
+                        SqlCommand cmd = new SqlCommand();
+                        cmd.Connection = con;
+                        con.Open();
+                        cmd.CommandText = " insert into IRBook (studentID,st_name,st_dep,st_sem,st_contact,st_email,book_name,book_issue_date) values(" + STID + ",'" + name + "','" + dept + "','" + sem + "'," + contact + ",'" + email + "','" + bookname + "','" + bookidate + "')";
+
+                        cmd.ExecuteNonQuery();
+                        cmd.CommandText = "update NewBookP set bquan = " + qunt + " where bname = '" + bookname + "'";
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        MessageBox.Show("Book Issued", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Selected book is not available", "No Book Issued", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
 
 
                 }
@@ -180,4 +202,6 @@ namespace Library_Management_System
         }
     }
     }
+
+
 
