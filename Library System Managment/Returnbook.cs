@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,6 +22,7 @@ namespace Library_System_Managment
         {
             textSearchID.Clear();
         }
+        int qunt;
 
         private void Searchstbtn_Click(object sender, EventArgs e)
         {
@@ -41,10 +42,19 @@ namespace Library_System_Managment
             {
                 MessageBox.Show("Invalid Student ID Or No Book Issued", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            //book quantity trace---------------
+            cmd.CommandText = "select bquan from NewBookP";
+            SqlDataAdapter DA1 = new SqlDataAdapter(cmd);
+            DataSet DS1 = new DataSet();
+            DA1.Fill(DS1);
+            qunt = int.Parse(DS1.Tables[0].Rows[0][0].ToString());
+
+            //book quantity trace---------------
         }
         string bname;
         String bdate;
         Int64 rowid;
+        
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -67,12 +77,16 @@ namespace Library_System_Managment
 
         private void RETURNbtn_Click(object sender, EventArgs e)
         {
+            
+            
             SqlConnection con = new SqlConnection();
             con.ConnectionString = "data source= DESKTOP-5903S8A\\SQLEXPRESS; database= master; integrated security=True";
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
             con.Open();
-            cmd.CommandText = "update IRBook set book_return_date = '" + dateTimePicker1.Text + "' where studentID ="+textSearchID.Text+" and idcount = "+rowid+"";
+            cmd.CommandText = "update IRBook set book_return_date = '" + dateTimePicker1.Text + "' where studentID ="+textSearchID.Text+" and idcount = "+rowid+ " ";
+            cmd.ExecuteNonQuery();
+            cmd.CommandText = "update NewBookP set bquan = " + qunt + " where bname = '"+ bname+"'";
             cmd.ExecuteNonQuery();
             con.Close();
 
@@ -105,3 +119,4 @@ namespace Library_System_Managment
         }
     }
 }
+
